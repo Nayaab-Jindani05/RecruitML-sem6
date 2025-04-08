@@ -1,0 +1,27 @@
+Name: Priya Shah  
+Email: priya.shah@example.com  
+Phone: +91-9876001234  
+
+Summary:  
+Experienced HR professional with 5+ years in employee engagement, recruitment, and organizational development.
+
+Skills:  
+- Recruitment & Onboarding  
+- Employee Engagement  
+- Performance Management  
+- HRMS Tools, Excel  
+
+Experience:  
+HR Manager – PeopleFirst HR  
+May 2021 – Present  
+- Led recruitment for over 100 positions across India  
+- Streamlined onboarding processes, reducing joining delays  
+
+HR Executive – ValueCorp  
+Aug 2018 – Apr 2021  
+- Coordinated training and development programs  
+- Handled payroll and exit formalities  
+
+Education:  
+MBA in Human Resources, NMIMS Mumbai  
+Graduated: 2018  

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Screener</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='screener.css') }}">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #1e3a8a;
+            --accent: #3b82f6;
+            --light: #f0f7ff;
+            --dark: #0f172a;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --gray: #6b7280;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: white;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 2.5rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+
+        .form-container {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        input[type="file"] {
+            background-color: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        input[type="file"]:hover {
+            border-color: var(--accent);
+            background-color: #f0f9ff;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 150px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 0 auto;
+            font-weight: 600;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2);
+        }
+
+        .results-container {
+            padding: 0 2rem 2rem;
+        }
+
+        .results-header {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover {
+            background-color: var(--light);
+        }
+
+        .footer {
+            background-color: #f8fafc;
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                width: calc(100% - 2rem);
+            }
+            
+            header {
+                padding: 1.5rem 1rem;
+            }
+            
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+           
+            <h2><i class="fas fa-file-search"></i> Resume Screener</h2>
+            <p>Upload multiple resumes and compare them against a job description</p>
+        </header>
+
+        <div class="form-container">
+            <form action="/screener" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label><i class="fas fa-file-upload"></i> Upload Resumes:</label>
+                    <input type="file" name="resumes" multiple required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-align-left"></i> Paste Job Description:</label>
+                    <textarea name="job_description" rows="10" cols="80" required placeholder="Paste the full job description here..."></textarea>
+                </div>
+
+                <button type="submit"><i class="fas fa-search"></i> Screen Resumes</button>
+            </form>
+        </div>
+
+        {% if results %}
+        <div class="results-container">
+            <h3 class="results-header"><i class="fas fa-chart-bar"></i> Matching Scores</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Resume</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for res in results %}
+                    <tr>
+                        <td>{{ res.name }}</td>
+                        <td>{{ res.score }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        <div class="footer">
+            &copy; 2025 Resume Intelligence System. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

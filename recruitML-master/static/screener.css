@@ -1,0 +1,100 @@
+/* Basic Reset and Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+h2 {
+    background: linear-gradient(90deg, #004e92, #000428);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Form Container */
+form {
+    background: white;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels and Inputs */
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background: #1dd1a1;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: auto;
+}
+
+button[type="submit"]:hover {
+    background: #10ac84;
+}
+
+/* Results Table */
+h3 {
+    text-align: center;
+    color: #222f3e;
+    margin-top: 40px;
+}
+
+table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+    font-size: 16px;
+}
+
+td {
+    font-size: 15px;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}

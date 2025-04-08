@@ -1,0 +1,27 @@
+Name: Arjun Mehta  
+Email: arjun.mehta@example.com  
+Phone: +91-9876543210  
+
+Summary:  
+Results-driven software engineer with 3+ years of experience in full-stack web development. Passionate about scalable backend systems and clean UI/UX.
+
+Skills:  
+- Python, JavaScript, Java  
+- Flask, React, Node.js  
+- REST APIs, SQL, MongoDB  
+- Git, Docker, AWS  
+
+Experience:  
+Software Developer – CodeCraft Ltd  
+Jan 2022 – Present  
+- Built internal dashboards using Flask and React  
+- Designed RESTful APIs for client reporting modules  
+
+Junior Developer – SoftTech Pvt Ltd  
+Jul 2020 – Dec 2021  
+- Automated internal reports with Python scripts  
+- Assisted in bug fixing and unit testing  
+
+Education:  
+B.Tech in Computer Science, VIT Vellore  
+Graduated: 2020  

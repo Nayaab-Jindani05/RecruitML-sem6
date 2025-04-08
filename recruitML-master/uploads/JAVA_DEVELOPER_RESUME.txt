@@ -1,0 +1,76 @@
+📄 JAVA DEVELOPER RESUME
+
+Name: John Doe
+Phone: (123) 456-7890
+Email: john.doe@example.com
+LinkedIn: linkedin.com/in/johndoe
+GitHub: github.com/johndoe
+Location: New York, NY
+
+💼 PROFESSIONAL SUMMARY
+Detail-oriented and results-driven Java Developer with over 3 years of experience in designing, developing, and maintaining scalable Java applications. Proficient in Java SE/EE, Spring Boot, RESTful APIs, and database integration. Passionate about clean code, agile development, and continuous learning.
+
+🛠️ TECHNICAL SKILLS
+Languages: Java, SQL, HTML, CSS, JavaScript
+
+Frameworks: Spring Boot, Hibernate, JSP, Servlets
+
+Databases: MySQL, PostgreSQL, Oracle
+
+Tools: Git, Maven, Jenkins, IntelliJ IDEA, Eclipse
+
+Web Services: RESTful APIs, JSON, SOAP
+
+Others: JUnit, Docker, Microservices, Agile/Scrum
+
+🧑‍💻 PROFESSIONAL EXPERIENCE
+Java Developer
+ABC Tech Solutions | New York, NY
+Mar 2022 – Present
+
+Developed and maintained RESTful services using Spring Boot and Hibernate.
+
+Built microservice components for an e-commerce platform handling 50,000+ daily users.
+
+Collaborated with front-end developers to integrate APIs and improve user experience.
+
+Optimized SQL queries, improving application response time by 30%.
+
+Wrote unit and integration tests using JUnit and Mockito.
+
+Software Developer (Java)
+XYZ Innovations | Remote
+Jan 2020 – Feb 2022
+
+Participated in full SDLC for internal HR management system.
+
+Implemented security using Spring Security and JWT-based authentication.
+
+Migrated monolithic architecture to microservices, enhancing scalability.
+
+Created RESTful endpoints consumed by Angular-based frontend.
+
+Utilized Git and Jenkins for version control and CI/CD pipelines.
+
+🎓 EDUCATION
+Bachelor of Technology in Computer Science
+University of California, Berkeley
+2015 – 2019
+
+🏆 CERTIFICATIONS
+Oracle Certified Professional: Java SE 11 Developer
+
+Spring Professional Certification by Pivotal
+
+📁 PROJECTS
+Online Banking System
+
+Java EE, JSP, Servlets, MySQL
+
+Features: user login, account summary, money transfer, transaction history
+
+Job Portal Application
+
+Spring Boot, REST API, PostgreSQL
+
+Includes: admin dashboard, resume upload, job matching algorithm

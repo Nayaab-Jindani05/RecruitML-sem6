@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #1e3a8a;
+            --accent: #3b82f6;
+            --light: #f0f7ff;
+            --dark: #0f172a;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --gray: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 2rem auto;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: white;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .options-container {
+            display: flex;
+            justify-content: center;
+            padding: 3rem 2rem;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .options-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .option-card {
+            background: white;
+            border-radius: 12px;
+            width: 300px;
+            height: 320px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            height: 140px;
+            background: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .card-icon {
+            font-size: 4rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .card-description {
+            color: var(--gray);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #1e3a8a;
+            color: white;
+            box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #1e40af;
+            box-shadow: 0 6px 10px rgba(30, 58, 138, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background-color: #f8fafc;
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-robot"></i> Welcome to RecruitML</h1>
+            <p>Powerful AI tool to help you analyze resumes</p>
+        </header>
+
+        <div class="options-container">
+            <div class="option-card">
+                <div class="card-header">
+                    <i class="fas fa-briefcase card-icon"></i>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h2 class="card-title">Candidate Analyzer</h2>
+                        <p class="card-description">Analyze candidate resumes easily and efficiently</p>
+                    </div>
+                    <a href="/recommender" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Analyze
+                    </a>
+                </div>
+            </div>
+
+            <div class="option-card">
+                <div class="card-header">
+                    <i class="fas fa-file-alt card-icon"></i>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h2 class="card-title">Resume Screener</h2>
+                        <p class="card-description">Match job description with uploaded resumes</p>
+                    </div>
+                    <a href="/screener" class="btn btn-primary">
+                        <i class="fas fa-analytics"></i> Screen Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Resume Intelligence System. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
